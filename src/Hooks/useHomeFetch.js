@@ -12,7 +12,6 @@ export const useHomeFetch = () =>{
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const[state,setState]=useState([]);
-
   const setStatusFilter=(event)=>{
     setSearchTerm(prev => ({...prev, status: event.target.value}))
   }
@@ -27,7 +26,7 @@ export const useHomeFetch = () =>{
           setError(false);
           setIsLoaded(true);
           const data = await fetchCharacters();
-          setState(data);
+          setState(data)
        
         }catch(error){
           setError(true);
@@ -59,6 +58,7 @@ export const useHomeFetch = () =>{
       getCharactersbyFilter()
     }
   }, [searchTerm])
+
 
   return {
     state,isLoaded,error,setStatusFilter,setGenderFilter

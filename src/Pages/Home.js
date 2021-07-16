@@ -4,6 +4,7 @@ import Grid from '../Components/Grid';
 import Thumb from '../Components/Thumb';
 import HeroImage from '../Components/HeroImage';
 import Search from '../Components/Search';
+
 //Hooks
 import {useHomeFetch,} from "../Hooks/useHomeFetch";
 
@@ -40,6 +41,7 @@ const Home = () =>{
         }
 
         </Grid>
+ 
         </>
     )
 

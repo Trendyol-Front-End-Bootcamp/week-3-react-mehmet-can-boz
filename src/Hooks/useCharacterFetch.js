@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import {fetchCharacter,fetchCharacterEpisodes} from "../API";
+import {fetchCharacter} from "../API";
 
 export const useCharacterFetch = characterId =>{
     const [state,setState]=useState({});
@@ -25,37 +25,5 @@ export const useCharacterFetch = characterId =>{
     },[characterId])
 
     return {state,loading,error}
-}
-
-export const useEpisodeFetch = (episodes,characterId) =>{
-    const [episodeName,setEpisodeName]=useState({});
-    const [eloading,setEloading]=useState(true);
-    const [eerror,setEerror]=useState(false);
-   
-    useEffect(()=>{
-
-        const fetchEpisodes= async ()=>{
-            try{
-                setEloading(true);
-                setEerror(false);
-    
-                const chrepisode=await fetchCharacterEpisodes(episodes);
-                if (!Array.isArray(chrepisode)) {
-                    setEpisodeName([chrepisode])
-                } else {
-                    setEpisodeName(chrepisode)
-                    
-                }
-                setEpisodeName(chrepisode)
-                setEloading(false);
-                
-            }catch(error){
-                setEerror(true);
-            };
-            }
-            fetchEpisodes();
-    },[characterId]);
-
-    return {episodeName,eloading,eerror}
 }
 

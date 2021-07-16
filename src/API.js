@@ -33,11 +33,3 @@ export const fetchCharactersFilters = async ({status,gender}) =>{
     return data;
     
 }
-
-export const fetchCharacterEpisodes= async(episodeIdarr)=>{
-    const data = axios.get(`${EPISODES_BASE_URL}/${episodeIdarr}`)
-    .then((response) => {
-        return response.data;
-    })
-    return data;
-}
