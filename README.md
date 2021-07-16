@@ -1,7 +1,8 @@
 # Ricky and Morty API Challenge
 This is a Trendyol Frontend Bootcamp React homework.
 ## Live Website Link
-
+You can use this link to see the app.
+Link= https://loving-meitner-9a4101.netlify.app/ 
 ## Installation
 
 Use the package manager [npm](https://www.npmjs.com/) to install foobar.
