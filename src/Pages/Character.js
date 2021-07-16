@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 //Component
 import CharacterInfo from '../Components/CharacterInfo';
@@ -10,8 +10,9 @@ import { useCharacterFetch } from '../Hooks/useCharacterFetch';
 
 const Character = () => {
     const {characterId}=useParams();
-    const {state,error,loading}=useCharacterFetch(characterId);    
-   
+    const {state,error,loading}=useCharacterFetch(characterId); 
+
+
     if(loading) return <Spinner />
     if(error)
     return <div>Something went Wrong ...</div>

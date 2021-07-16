@@ -1,21 +1,27 @@
 import React from 'react';
 
-import { useEpisodeFetch } from '../Hooks/useCharacterFetch';
-
-const EpisodesName = ({episodes,chid}) =>{
-    console.log(episodes);
-    const {episodeName}=useEpisodeFetch(episodes,chid);
- 
+const EpisodesName = ({episodeName}) =>{
     return(
       <>
-
+      <h3>Episodes</h3>
+      <table>
+          <tr>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Season</th>
+          </tr>
       {
-        
-        Array.prototype.map.call(episodeName,(element,index) =>{
-            return <h1 key={index}>{element.name}</h1>
-        } )
-        
+        episodeName.map(element =>{
+          return(
+              <tr>
+                <td>{element.name}</td>
+                <td>{element.air_date}</td>
+                <td>{element.episode}</td>
+              </tr>
+          )
+        })
       }
+    </table>
       </>
     )
 }

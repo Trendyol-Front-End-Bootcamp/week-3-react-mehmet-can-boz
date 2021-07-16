@@ -49,6 +49,7 @@ header div{
   padding:20px 0;
 
 }
+
 /* Search */
 .search{
   display: flex;
@@ -69,7 +70,8 @@ header div{
   border-radius: 10px;
 }
 
-/**/
+/*--------------------------*/
+
 /*Breadcrump*/
 .breadcrump{
   display: flex;
@@ -96,6 +98,8 @@ header div{
 color: yellow;
 outline: none;
 }
+/*--------------------------*/
+
 /*Cards*/
 .cards{
   max-width: var(--maxWidth);
@@ -135,6 +139,8 @@ outline: none;
 .card-item:hover{
   box-shadow: 2px 1px 17px 3px rgba(0,0,0,0.89);
 }
+/*---------------------------*/
+
 /* Spinner */
 .spinner{
  border:5px solid var(--lightGrey);
@@ -153,6 +159,7 @@ margin: 20px auto;
       transform: rotate(360deg);
   }
 }
+/*-------------------------*/
 
 /*Character Info */
 .wrapper{
@@ -172,6 +179,7 @@ margin: 20px auto;
 .characterInfo p,b,h1{
   color: black;
 }
+/*------------------------*/
 
 /*Hero Image*/
 .hero-img{
@@ -182,6 +190,25 @@ margin: 20px auto;
    position:relative;
    animation:animateHeroImage 1s;
 }
+/*------------------------*/
+
+/*Episode Tables*/
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+/*--------------------------*/
 
 @keyframes animateHeroImage {
   from {
