@@ -4,17 +4,17 @@ import Grid from '../Components/Grid';
 import Thumb from '../Components/Thumb';
 import HeroImage from '../Components/HeroImage';
 import Search from '../Components/Search';
-
+import Spinner from "../Components/Spinner";
+import Button from '../Components/Button';
 //Hooks
 import {useHomeFetch,} from "../Hooks/useHomeFetch";
 
 
 const Home = () =>{
-    const {state,error,searchTerm,setStatusFilter,setGenderFilter}=useHomeFetch();
+    const {state,error,isLoaded,searchTerm,setStatusFilter,setGenderFilter,dataInfo,setIsLoadingMore,pageNumber}=useHomeFetch();
 
     if(error)
     return <div>Something went Wrong ...</div>
-    
     return (
         <>
         <HeroImage/>
@@ -41,7 +41,11 @@ const Home = () =>{
         }
 
         </Grid>
- 
+        {isLoaded && <Spinner/>}
+        {pageNumber < dataInfo.pages && !isLoaded && (
+            <Button text='Load More' callback={()=> setIsLoadingMore(true)}/>
+        )}
+       
         </>
     )
 

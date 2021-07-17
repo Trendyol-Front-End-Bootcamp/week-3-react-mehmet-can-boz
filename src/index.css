@@ -125,6 +125,15 @@ outline: none;
   animation: animateTumb 0.5s;
   border-radius: 20px;
 }
+@keyframes animateTumb {
+  from{
+
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  };
+}
 .card-item p{
   color: black;
   font-size: 15px
@@ -190,6 +199,15 @@ margin: 20px auto;
    position:relative;
    animation:animateHeroImage 1s;
 }
+@keyframes animateHeroImage {
+  from {
+      opacity:0;
+  }
+  to
+  {
+      opacity:1;
+  }
+}
 /*------------------------*/
 
 /*Episode Tables*/
@@ -209,25 +227,37 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 /*--------------------------*/
-
-@keyframes animateHeroImage {
-  from {
-      opacity:0;
-  }
-  to
-  {
-      opacity:1;
-  }
+/*Button */
+button{
+  display: block;
+  background: var(--darkGrey);
+  width: 25%;
+  min-width:200px ;
+  height: 60px;
+  border-radius: 30px;
+  color: var(--white);
+  border: 0;
+  font-size: var(--fontBig);
+  margin: 20px auto;
+  transition: all 0.3s;
+  outline: none;
+  cursor: pointer;
 }
-@keyframes animateTumb {
-  from{
-
-      opacity: 0;
-  }
-  to {
-      opacity: 1;
-  };
+button:hover{
+  opacity: 0.8;
 }
+/*Not Found*/
+.notFound{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.notFound h1{
+  font-size: 4rem;
+}
+/*-----------------*/
+
+
 
 @media screen and (max-width:750px){
   .hero-img{
