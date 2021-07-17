@@ -31,6 +31,7 @@ export const useHomeFetch = () =>{
   async function getCharacters(page,searchTerm) {
 
         try{
+
           setError(false);
           setIsLoaded(true);
           const data = await fetchCharacters(page,searchTerm);
@@ -39,28 +40,27 @@ export const useHomeFetch = () =>{
           
         }catch(error){
           setError(true);
-        }
-        
-        setIsLoaded(false);
+        }    
 
+        setIsLoaded(false);
   };
 
 useEffect(() => {
 
     getCharacters(pageNumber,searchTerm);
 
-}, [searchTerm])
+}, [searchTerm,pageNumber])
 
     //Load More
 useEffect(()=>{
 
 if(!isLoadingMore) return;
-
-  setPageNumber(pageNumber+1);
+  
+  setPageNumber(pageNumber + 1);
   getCharacters(pageNumber,searchTerm); 
   setIsLoadingMore(false);
-
-},[isLoadingMore,pageNumber,searchTerm])
+  
+},[isLoadingMore])
 
   return {
     state,isLoaded,error,pageNumber,dataInfo,setStatusFilter,setGenderFilter,setIsLoadingMore
