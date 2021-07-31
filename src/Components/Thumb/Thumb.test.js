@@ -1,9 +1,9 @@
 import Thumb from  "./Thumb";
-import {render} from "@testing-library/react";
+import { render } from "@testing-library/react";
 
-describe("Thumb",()=>{
-    
-    it.skip("renders without crashing", () => {
-        render(<Thumb />);
-    });
+describe("Thumb", () => {
+  it.skip("renders without crashing", () => {
+    render(<Thumb />);
+  });
+
 })

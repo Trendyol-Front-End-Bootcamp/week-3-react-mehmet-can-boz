@@ -1,13 +1,12 @@
-
 import { useEffect, useState } from 'react';
 import { fetchCharacters } from "../../Service/API";
 
 const initialState ={
-    status:"",
-    gender:""
+  status:"",
+  gender:""
 }
-export const useHomeFetch = () =>{
 
+export const useHomeFetch = () =>{
   const [searchTerm,setSearchTerm]=useState(initialState);
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -29,37 +28,31 @@ export const useHomeFetch = () =>{
   }
 
   async function getCharacters(page,searchTerm) {
+    try{
+      setError(false);
+      setIsLoaded(true);
 
-        try{
+      const data = await fetchCharacters(page,searchTerm);
+      setDataInfo(data.info);
+      setState(state.concat(data.results));
+    }catch(error){
+      setError(true);
+    }    
 
-          setError(false);
-          setIsLoaded(true);
-          const data = await fetchCharacters(page,searchTerm);
-          setDataInfo(data.info)
-          setState(state.concat(data.results))
-          
-        }catch(error){
-          setError(true);
-        }    
-
-        setIsLoaded(false);
+    setIsLoaded(false);
   };
 
-useEffect(() => {
-
-    getCharacters(pageNumber,searchTerm);
-
-}, [searchTerm,pageNumber])
+  useEffect(() => {
+    getCharacters(pageNumber, searchTerm);
+  },[searchTerm, pageNumber]) 
 
     //Load More
-useEffect(()=>{
-
-if(!isLoadingMore) return;
+  useEffect(()=>{
+    if(!isLoadingMore) return;
   
-  setPageNumber(pageNumber + 1);
-  getCharacters(pageNumber,searchTerm); 
-  setIsLoadingMore(false);
-  
+    setPageNumber(pageNumber + 1);
+    getCharacters(pageNumber,searchTerm); 
+    setIsLoadingMore(false);
 },[isLoadingMore])
 
   return {
