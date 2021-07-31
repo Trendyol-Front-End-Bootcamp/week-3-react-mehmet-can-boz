@@ -4,9 +4,9 @@ import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
 import Header from "./Components/Header/Header";
 
 //Pages
-import Home from "./Pages/Home";
-import Character from "./Pages/Character";
-import NotFound from "./Pages/NotFound";
+import Home from "./Pages/Home/Home";
+import Character from "./Pages/Character/Character";
+import NotFound from "./Pages/NotFound/NotFound";
 
 const App = () =>(
    <Router>

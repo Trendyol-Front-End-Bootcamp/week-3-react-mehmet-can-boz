@@ -1,11 +1,11 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 //Component
-import CharacterInfo from '../Components/CharacterInfo/CharacterInfo';
-import Spinner from '../Components/Spinner/Spinner';
-import BreadCrumb from '../Components/BreadCrump/BreadCrump';
+import CharacterInfo from '../../Components/CharacterInfo/CharacterInfo';
+import Spinner from '../../Components/Spinner/Spinner';
+import BreadCrumb from '../../Components/BreadCrump/BreadCrump';
 //Hooks
-import { useCharacterFetch } from '../Hooks/useCharacterFetch/useCharacterFetch';
+import { useCharacterFetch } from '../../Hooks/useCharacterFetch/useCharacterFetch';
 
 const Character = () => {
     const {characterId}=useParams();
