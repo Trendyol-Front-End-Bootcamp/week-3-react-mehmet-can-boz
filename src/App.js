@@ -1,9 +1,8 @@
 import React from 'react';
 import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
 //Components
-import Header from "./Components/Header";
-//Hooks
-import {useHomeFetch} from "./Hooks/useHomeFetch";
+import Header from "./Components/Header/Header";
+
 //Pages
 import Home from "./Pages/Home";
 import Character from "./Pages/Character";

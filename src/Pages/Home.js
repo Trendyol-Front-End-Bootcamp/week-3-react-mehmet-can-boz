@@ -1,13 +1,13 @@
 import React from 'react';
 //Components
-import Grid from '../Components/Grid';
-import Thumb from '../Components/Thumb';
-import HeroImage from '../Components/HeroImage';
-import Search from '../Components/Search';
-import Spinner from "../Components/Spinner";
-import Button from '../Components/Button';
+import Grid from '../Components/Grid/Grid';
+import Thumb from '../Components/Thumb/Thumb';
+import HeroImage from '../Components/HeroImage/HeroImage';
+import Search from '../Components/Search/Search';
+import Spinner from "../Components/Spinner/Spinner";
+import Button from '../Components/Button/Button';
 //Hooks
-import {useHomeFetch,} from "../Hooks/useHomeFetch";
+import { useHomeFetch } from "../Hooks/useHomeFetch/useHomeFetch";
 
 
 const Home = () =>{
