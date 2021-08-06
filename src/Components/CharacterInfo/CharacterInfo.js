@@ -32,13 +32,13 @@ const CharacterInfo = ({ image, name, status, species, gender, location, episode
 
     return (
       <div className="wrapper">
-        <img src={image} alt="character-img"/>
+        <img id="character"src={image} alt="character-img"/>
         <div className="characterInfo">
-          <h1>{name}</h1>
-          <p>Status:<b>{status}</b></p>
-          <p>Species:<b>{species}</b></p>
-          <p>Gender:<b>{gender}</b></p>
-          <p>Location:<b>{location}</b></p>
+          <h1 id="characterName">{name}</h1>
+          <p>Status:<b id="characterStatus">{status}</b></p>
+          <p>Species:<b id="characterSpecies">{species}</b></p>
+          <p>Gender:<b id="characterGender">{gender}</b></p>
+          <p>Location:<b  id="characterLocation">{location}</b></p>
           <EpisodesName episodeName={episodeName} />
         </div>
       </div>

@@ -17,9 +17,9 @@ const EpisodesName = ({ episodeName }) => {
           episodeName.map(element =>{
             return(
               <tr key={element.id}>
-                <td>{element.name}</td>
-                <td>{element.air_date}</td>
-                <td>{element.episode}</td>
+                <td id="episodeName">{element.name}</td>
+                <td id="episodeDate">{element.air_date}</td>
+                <td id="episodeSeason">{element.episode}</td>
               </tr>
             )
           })

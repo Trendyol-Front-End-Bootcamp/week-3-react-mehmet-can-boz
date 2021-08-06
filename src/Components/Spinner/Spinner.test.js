@@ -1,9 +1,10 @@
 import Spinner from  "./Spinner";
-import { render } from "@testing-library/react";
+import { shallow } from "enzyme";
 
 describe("Spinner", () => {
   it("renders without crashing", () => {
-    render(<Spinner />);
+    const wrapper= shallow(<Spinner />);
+    expect(wrapper.hasClass('spinner')).toEqual(true);
   });
 
 })

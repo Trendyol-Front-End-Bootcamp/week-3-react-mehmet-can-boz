@@ -7,7 +7,7 @@ const Thumb = ({image,name,species,gender,status,location,characterId,clickable}
     <Link to={`/${characterId}`}>
       <img className="card-img" src={image} alt='movie-thumb' />
     </Link>
-    <p>Species:<b>{species}</b></p>
+    <p>Species:<b data-testid="species">{species}</b></p>
     <p>Gender:<b>{gender}</b></p>
     <p>Status:<b>{status}</b></p>
     <p>Last Location:<b>{location}</b></p>

@@ -3,7 +3,7 @@ import React from 'react';
 const Search= ({gendereventHandler,statusEventHandler})=>(
   <div className="search">
     <div>
-      <h3>Gender Filter</h3>
+      <h3 id="gender-filter">Gender Filter</h3>
       <select name="gender" id="genderSearch" onChange={gendereventHandler}>
         <option value=""></option>
         <option value="male">Male</option>
@@ -13,7 +13,7 @@ const Search= ({gendereventHandler,statusEventHandler})=>(
       </select>
     </div>
     <div>
-      <h3>Status Filter</h3>
+      <h3 id="status-filter">Status Filter</h3>
       <select name="status" id="statusSarch" onChange={statusEventHandler}>
         <option value=""></option>
         <option value="alive">Alive</option>
